@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace ExamenTANAKA
 {
-    internal class PocionVida
+    class PocionVida : Item
     {
+        public int CantidadRecuperar { get; set; }
+
+        public PocionVida(int cantidadRecuperar)
+            : base("Poción de Vida")
+        {
+            CantidadRecuperar = cantidadRecuperar;
+        }
+
+        public override void Efectuar(Personaje personaje)
+        {
+            personaje.Vida += CantidadRecuperar;
+            Console.WriteLine($"{personaje.Nombre} recuperó {CantidadRecuperar} de vida. Vida actual: {personaje.Vida}");
+        }
     }
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ExamenTANAKA
 {
-    internal class Item
-    {
+    abstract class Item
+       {
         public string Nombre { get; set; }
 
         public Item(string nombre)

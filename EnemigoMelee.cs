@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ExamenTANAKA
 {
-    internal class EnemigoMelee
+    class EnemigoMelee : Personaje
     {
+        public EnemigoMelee(string nombre, int vida, int daño) : base(nombre, vida, daño) { }
+    }
+
+    class EnemigoRango : Personaje
+    {
+        public EnemigoRango(string nombre, int vida, int daño) : base(nombre, vida, daño) { }
     }
 }
